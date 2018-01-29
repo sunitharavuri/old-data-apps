@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- UI design by Rakesh Gudla-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+
+
+<wicket:head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/img/14/favicon/favicon-196.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/img/14/favicon/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/14/favicon/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/img/14/favicon/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/14/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/14/favicon/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/14/favicon/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/14/favicon/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/14/favicon/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/14/favicon/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/14/favicon/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/14/favicon/favicon-72.png">
+    <link rel="apple-touch-icon" href="/img/14/favicon/favicon-57.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/img/14/favicon/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+    <title><wicket:message key="login.login.header"/></title>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/ehour_ui14.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css"/>
+
+    <script type="application/javascript" src="menu/js/jqueryMin.js"></script>
+    <!-- Auth2 -->
+    <script src="https://raw.githubusercontent.com/taylorhakes/promise-polyfill/master/promise.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script language="JavaScript">
+        // To add to window
+        if (!window.Promise)
+        {
+            window.Promise = Promise;
+        }
+        function setupAuth2() {
+            gapi.load('auth2', initAuth2Lib);
+        }
+
+        function initAuth2Lib() {
+
+            gapi.auth2.init({
+                client_id: '880116504877-i0c5lu08vakjpfilr49584fll80tha2m.apps.googleusercontent.com',
+                scope: 'profile'
+            }).then(sendCredentials, function(){console.log("NOT INITIALIZED");});
+
+            function sendCredentials()
+            {
+                console.log("INITIALIZED");
+
+            }
+
+        }
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+            });
+        }
+
+        function loginWithG()
+        {
+            var auth2 = gapi.auth2.getAuthInstance();
+            var promise = new Promise(function (resolve, reject) {
+                resolve( auth2.signOut() );
+            });
+            promise.then(signInProcedure);
+        }
+
+        function signInProcedure()
+        {
+            var auth2 = gapi.auth2.getAuthInstance();
+            options = new gapi.auth2.SigninOptionsBuilder();
+            options.setPrompt('select_account');
+            Promise.resolve( auth2.signIn(options) ).then(signInReady);
+        }
+
+        function signInReady()
+        {
+            var a = gapi.auth2.getAuthInstance();
+            var profile = a.currentUser.get().getBasicProfile();
+            console.log("NAME:", profile.getName());
+            console.log("GIVEN NAME:", profile.getGivenName());
+            console.log("FAMILY NAME:", profile.getFamilyName());
+
+            document.getElementById("idToken").value = a.currentUser.get().getAuthResponse().id_token;
+
+            document.getElementById("loginform").submit();
+        }
+        $(document).ready(function(){
+            $(".description-header").click(function () {
+
+                $header = $(this);
+                $header.find('i').toggleClass('fa-plus-circle fa-minus-circle');
+                $content = $header.next();
+                $content.slideToggle(500, function () {});
+            });
+        });
+    </script>
+</wicket:head>
+
+<body onload="setupAuth2()" data-gr-c-s-loaded="true">
+        <div class="col-sm-10 logo">
+                            <img src="../img/14/nisum_large.svg" width="324" height="113" alt="NisumTimesheet">
+                        </div> 
+        <div class="container">
+            <div class="row login-nisum">
+                 <div class="row">
+                <div class="col-md-6">
+        <!--             <div class="row"> -->
+        <!--                 <div class="col-sm-1">&nbsp;</div> -->
+                          <!--                 <div class="col-sm-10 logo">
+                            <img src="../img/14/nisum_large.svg" width="324" height="113" alt="NisumTimesheet">
+                        </div> -->
+                        <div class="nisum-ehour-description">
+                              <div class="description-header"><i class="fa fa-minus-circle fa-1x" aria-hidden="true"></i>  Welcome to the Nisum Timesheet tool</div>
+                            <div class="description-content">
+                                You can now sign in with your ehour username password or using your Nisum Gmail Account by clicking the <i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i> button to get into your timesheet account.
+                                <ul>
+                                    <li>It is mandatory that everyone fill timesheets into this tool by end of Friday every week.</li>
+                                    <li><img src="../img/14/new_icon.png" height="25" width="25">If you don't see your projects assignments, please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbQP6_omM_hDpeskrPjHzcq67tBOjP3kK60ddNqhLSgi9gEQ/viewform">PROJECT ASSIGNMENTS REQUEST</a> to add your petition. The admin will have until the upcoming WEDNESDAY to solve them, therefore raise it before that happens.</li>
+                                    <li><img src="../img/14/new_icon.png" height="25" width="25">If you need to unlock your previous weeks, please go to this <a href="https://docs.google.com/forms/d/e/1FAIpQLScVMQnQnOloRmqG0zPjxMUyE73xLpeyairRcprhuESRJkr_2w/viewform?c=0&amp;w=1">UNLOCK REQUEST</a> to initiate a requirement.</li>
+                                    <li>If you run into problems/have suggestions/improvements about the timesheet application itself, please send your queries to <a href="mailto:GL_PR_ehourteam@nisum.com">GL_PR_ehourteam@nisum.com</a></li>
+                                </ul>
+                                <div align="center">
+                                    <a href="itms-services://?action=download-manifest&amp;url=https://dev-timesheets.mynisum.com/MAD/iOS_App/manifest.plist"><img src="../img/14/login_apple.png" width="12%" height="12%"></a>
+                                    <a href="https://dev-timesheets.mynisum.com/MAD/android_app/app-release.apk"><img src="../img/14/login_android.png" width="12%" height="12%"></a>
+                                </div>
+                            </div>
+                        </div>
+        <!--             </div> -->
+                </div>
+                <div class="col-md-6">
+        <!--             <div class="row"> -->
+                        <div class=" col-xs-8 nisum-credentials">
+                            <div class="panel panel-default">
+                                <div class="panel-heading nisum-color">
+                                    <h3 class="panel-title">Log In</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form class="form" role="form" id="loginform" method="post" action="./login?-1.IFormSubmitListener-loginform"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden"><input type="hidden" name="loginform_hf_0" id="loginform_hf_0"></div>
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="col-sm-1">&nbsp;</div>
+                                                <div class="col-sm-10">
+          
+        </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-1">&nbsp;</div>
+                                                
+                                            </div>
+                                            <div class="google-signIn">
+                                                <span class="google-text">QUICK Sign in : </span>
+                                                    <a href="#" onclick="return loginWithG()">
+                                                        <i class="fa fa-google-plus-square fa-5x" aria-hidden="true"></i>
+                                                    </a>
+                                            </div>
+                                    <div class="or">
+                                        (OR)
+                                    </div>
+                                    <hr>
+                                            <div class="form-group">
+                                                <input type="text" placeholder="username" class="form-control" id="username" value="" name="username">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" id="password" value="" name="password" placeholder="password">
+                                            </div>
+                                            <button class="btn btn-default button nisum-color" id="loginSubmit">
+                                                Sign in
+                                            </button>
+        
+                                        </fieldset>
+        
+                                        <input type="hidden" id="idToken" value="" name="idToken">
+        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+            </div>
+            <h3>Happy Filling timesheets every Friday!!!</h3>
+        </div>
+        
+        
+        
+        
+        
+        <iframe aria-hidden="true" id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" src="https://accounts.google.com/o/oauth2/iframe#origin=http%3A%2F%2Flocalhost%3A8080&amp;rpcToken=334286470.38172215&amp;clearCache=1" style="position: absolute;width: 1px;height: 1px;left: -9999px;display: none;"></iframe></body>
+
+</body>
+</html>
+
+
+
+<!-- Css Changes 
+    .nisum-ehour-description {
+    font-size: 11px;
+    word-spacing: 1px;
+    margin-top: 94px;
+}//in ehour_ui14.css
+bootstrap.min.css file 
+
+
+col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 30px;//changed from 15px to 30px
+    padding-right: 15px;
+
+//for ipad ....
+in ehour_ui14.css
+css changes are 
+.login-nisum {
+    margin-top: 75px;//from
+}
+.login-nisum .nisum-credentials {
+    margin-left: 100;
+    margin-left: 100px;
+    margin-top: 50px;
+
+
+
+-->
+
+

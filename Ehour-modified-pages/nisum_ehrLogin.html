@@ -1,0 +1,468 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="gr__localhost">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/img/14/favicon/favicon-196.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/img/14/favicon/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/14/favicon/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/img/14/favicon/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/14/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/14/favicon/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/14/favicon/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/14/favicon/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/14/favicon/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/14/favicon/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/14/favicon/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/14/favicon/favicon-72.png">
+    <link rel="apple-touch-icon" href="/img/14/favicon/favicon-57.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/img/14/favicon/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+    <title>eHour - Sign in</title>
+    <link rel="stylesheet" type="text/css" href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.iUegqW_MtS8.O/m=auth2/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCO5bVcX6l_LBMW9kRaNn7eGxqL7Sg/cb=gapi.loaded_0"
+        async=""></script>
+    <script type="application/javascript" src="../menu/js/jqueryMin.js"></script>
+    <script type="text/javascript">try {
+            var AG_onLoad = function (func) { if (document.readyState === "complete" || document.readyState === "interactive") func(); else if (document.addEventListener) document.addEventListener("DOMContentLoaded", func); else if (document.attachEvent) document.attachEvent("DOMContentLoaded", func) };
+            var AG_removeElementById = function (id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); } };
+            var AG_removeElementBySelector = function (selector) { if (!document.querySelectorAll) { return; } var nodes = document.querySelectorAll(selector); if (nodes) { for (var i = 0; i < nodes.length; i++) { if (nodes[i] && nodes[i].parentNode) { nodes[i].parentNode.removeChild(nodes[i]); } } } };
+            var AG_each = function (selector, fn) { if (!document.querySelectorAll) return; var elements = document.querySelectorAll(selector); for (var i = 0; i < elements.length; i++) { fn(elements[i]); }; };
+            var AG_removeParent = function (el, fn) { while (el && el.parentNode) { if (fn(el)) { el.parentNode.removeChild(el); return; } el = el.parentNode; } };
+            var AG_defineProperty = function () { var p = "function" == typeof WeakMap ? WeakMap : function () { function c() { this.a = Math.random().toString(36).slice(7) } c.prototype.get = function (e) { return e[this.a] }; c.prototype.set = function (e, c) { e[this.a] = c; return this }; return c }(); return function (c, e, n) { function h(a, c) { if (!(a instanceof Object)) return a; var f = c.indexOf("."), d = c.slice(0, f), g = c.slice(f + 1); if (f = k.get(a)) for (var l = f.length; 0 < l--;) { var m = f[l]; if (m == c) return a; if (m.split(".", 1)[0] == d) return console.warn("AG_defineProperty: unresolvable circular reference detected."), a } var b = Object.getOwnPropertyDescriptor(a, d); if (!b && Object.isExtensible(a) || b.configurable) 0 === g.length ? Object.defineProperty(a, d, e) : Object.defineProperty(a, d, { get: function () { if (b) { if (b.hasOwnProperty("value")) var a = b.value; else if (b.get) a = b.get.call(this); else return; return h(a, g) } }, set: function (a) { return b ? b.hasOwnProperty("value") ? b.writable ? (b.value = a, !0) : !1 : b.set ? b.set.call(this, a) : !1 : (b = {}, b.value = a, b.writable = !0) }, enumerable: b ? b.enumerable : !0 }); else if (b && b.writable) { if (0 === g.length) if (e.writable) a[d] = e.value; else return console.warn("AG_defineProperty: cannot rewrite property " + d + "."), a; a[d] = h(b.value, g) } else return console.warn("AG_defineProperty: cannot redefine property " + d + "."), a; f ? f.push(c) : k.set(a, [c]); return a } var k = new p; h(n || window, c + ".") } }();
+            (function () { var e = navigator.language, f = "AdGuard has detected that this website is trying to use your browser as a blockchain currency miner. It can create significant CPU load. Allow?"; e && 0 === e.indexOf("ru") && (f = "AdGuard \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0438\u043b, \u0447\u0442\u043e \u044d\u0442\u043e\u0442 \u0441\u0430\u0439\u0442 \u043f\u044b\u0442\u0430\u0435\u0442\u0441\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c \u0432\u0430\u0448 \u0431\u0440\u0430\u0443\u0437\u0435\u0440 \u0434\u043b\u044f \u0434\u043e\u0431\u044b\u0447\u0438 \u043a\u0440\u0438\u043f\u0442\u043e\u0432\u0430\u043b\u044e\u0442\u044b. \u042d\u0442\u043e \u043c\u043e\u0436\u0435\u0442 \u0441\u043e\u0437\u0434\u0430\u0442\u044c \u0437\u0430\u043c\u0435\u0442\u043d\u0443\u044e \u043d\u0430\u0433\u0440\u0443\u0437\u043a\u0443 \u043d\u0430 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0440. \u0420\u0430\u0437\u0440\u0435\u0448\u0438\u0442\u044c?"); var c = null; "undefined" === typeof sessionStorage ? c = !1 : "1" === sessionStorage.getItem("__agch") ? c = !0 : "0" === sessionStorage.getItem("__agch") && (c = !1); var g = function (a) { var b; Object.defineProperty(a, "JobThread", { get: function () { return b }, set: function (a) { b = function () { if (null == c) { c = window.confirm(f); try { c ? sessionStorage.setItem("__agch", "1") : sessionStorage.setItem("__agch", "0") } catch (h) { } } var b = a.apply(this, arguments) || this; c || b.stop(); return b }; b.prototype = a.prototype; b.prototype.constructor = b } }) }; try { var d; window.CoinHive ? g(window.CoinHive) : Object.defineProperty(window, "CoinHive", { get: function () { return d }, set: function (a) { d !== a && (d = a, g(d)) } }) } catch (a) { } })();
+        } catch (ex) { console.error('Error executing AG js: ' + ex); }</script>
+    <!-- Auth2 -->
+    <script src="https://raw.githubusercontent.com/taylorhakes/promise-polyfill/master/promise.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true"></script>
+    <script language="JavaScript" id="net-rrm-ehour-ui-login-page-Login-0">
+        /*<![CDATA[*/
+    
+            // To add to window
+            if (!window.Promise)
+            {
+                window.Promise = Promise;
+            }
+            function setupAuth2() {
+                gapi.load('auth2', initAuth2Lib);
+            }
+    
+            function initAuth2Lib() {
+    
+                gapi.auth2.init({
+                    client_id: '880116504877-i0c5lu08vakjpfilr49584fll80tha2m.apps.googleusercontent.com',
+                    scope: 'profile'
+                }).then(sendCredentials, function(){console.log("NOT INITIALIZED");});
+    
+                function sendCredentials()
+                {
+                    console.log("INITIALIZED");
+    
+                }
+    
+            }
+            function signOut() {
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut().then(function () {
+                    console.log('User signed out.');
+                });
+            }
+    
+            function loginWithG()
+            {
+                var auth2 = gapi.auth2.getAuthInstance();
+                var promise = new Promise(function (resolve, reject) {
+                    resolve( auth2.signOut() );
+                });
+                promise.then(signInProcedure);
+            }
+    
+            function signInProcedure()
+            {
+                var auth2 = gapi.auth2.getAuthInstance();
+                options = new gapi.auth2.SigninOptionsBuilder();
+                options.setPrompt('select_account');
+                Promise.resolve( auth2.signIn(options) ).then(signInReady);
+            }
+    
+            function signInReady()
+            {
+                var a = gapi.auth2.getAuthInstance();
+                var profile = a.currentUser.get().getBasicProfile();
+                console.log("NAME:", profile.getName());
+                console.log("GIVEN NAME:", profile.getGivenName());
+                console.log("FAMILY NAME:", profile.getFamilyName());
+    
+                document.getElementById("idToken").value = a.currentUser.get().getAuthResponse().id_token;
+    
+                document.getElementById("loginform").submit();
+            }
+            $(document).ready(function(){
+                $(".description-header").click(function () {
+    
+                    $header = $(this);
+                    $header.find('i').toggleClass('fa-plus-circle fa-minus-circle');
+                    $content = $header.next();
+                    $content.slideToggle(500, function () {});
+                });
+            });
+
+    /*]]>*/
+    </script>
+    <script type="text/javascript" src="./wicket/resource/org.apache.wicket.resource.JQueryResourceReference/jquery/jquery-1.11.2.min-ver-1.4.3n-SNAPSHOT.js"></script>
+<style>body {
+        font: 1.3em Geneva, Arial, Helvetica, sans-serif;
+    }
+    
+    .outer-container {
+        border-radius: 14px;
+        border: 1px solid #f8f8f8;
+        background: #f8f8f8;
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        margin-top: 10%;
+    }
+    
+    .inner-container {
+        margin: 15px 25px 15px 25px;
+    
+        padding: 10px;
+    
+        border-radius: 14px;
+        border: 0 solid transparent;
+    
+        background: #b1cbe5; /* Old browsers */
+        background: -moz-linear-gradient(left,  #b1cbe5 0%, #a6c0da 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,#b1cbe5), color-stop(100%,#a6c0da)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  #b1cbe5 0%,#a6c0da 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left,  #b1cbe5 0%,#a6c0da 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  #b1cbe5 0%,#a6c0da 100%); /* IE10+ */
+        background: linear-gradient(to right,  #b1cbe5 0%,#a6c0da 100%); /* W3C */
+    }
+    
+    .content {
+        padding: 10px;
+        width: inherit;
+    }
+    
+    .logo {
+        padding: 1em 0 0 0 !important;
+    }
+    
+    .version {
+        padding-left: 2.4em;
+        margin: -1.2em 20em 0 0;
+        font-size: 1em;
+        text-align: right;
+    }
+    
+    .login-form-container {
+        padding: 0 0 0 0.5em;
+    }
+    
+    input {
+        height: 2em !important;
+        border: 1px solid #9abbd9 !important;
+        color: #233e55 !important;
+    }
+    
+    input:focus {
+        border: 1px solid #7f9ab3 !important;
+    }
+    
+    .form-input {
+        padding-left: 2px !important;
+        padding-bottom: 10px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px !important;
+    }
+    
+    .submit {
+        text-align: right;
+        margin-right: 0.5em;
+    }
+    
+    .submit .button {
+        background: transparent;
+        color:white;
+        border-color: #f0f0f0;
+    }
+    
+    .btn:hover, .btn:active, .btn:focus {
+        outline: none !important;
+    }
+    
+    .submit .button:hover {
+        background-color: #afcae5;
+        border-color: #eeeeee;
+    }
+    
+    .error {
+        color: #ff3333;
+        padding-top: 2em;
+    }
+    
+    .form-control {
+        padding: 0 12px !important;
+    }
+    
+    .login-nisum {
+        margin-top: 50px;
+    }
+    .login-nisum .logo{
+        margin-left: 40px;
+    }
+    .nisum-ehour-description{
+        font-size: 11px;
+        word-spacing: 1px;
+        margin-top: 94px;
+    }
+    .login-nisum .nisum-credentials{
+        margin-left: 15px;
+        margin-top: 50px;
+    }
+    .login-nisum .nisum-credentials .panel{
+        margin-top: 40px;
+    }
+    .login-nisum .or{
+        margin-top: 13px;
+        position: absolute;
+        right: 50%;
+        background-color: white;
+        color: #00b3e3;
+    }
+    .nisum-ehour-description .description-header{
+        background-color: #00b3e3;
+        font-size: 18px;
+        text-align: center;
+        padding: 4px;
+        color: #ffffff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .nisum-ehour-description .description-header .fa{
+        float: left;
+        padding-left: 3px;
+    }
+    
+    .nisum-ehour-description .description-content{
+        display: block;
+        padding: 5px;
+        font-size: 12px;
+        border-bottom: 1px solid rgb(0, 179, 227);
+        border-left: 1px solid rgb(0, 179, 227);
+        border-right: 1px solid rgb(0, 179, 227);
+        line-height: 25px;
+        letter-spacing: 0.7px;
+        font-weight: 600;
+    }
+    
+    .nisum-ehour-description .description-content .fa-2x{
+        color: #d34836;
+    }
+    .google-signIn .google-text{
+        font-size: 26px;
+    }
+    .google-signIn .fa-google-plus-square{
+        color: #d34836;
+        padding-left: 10px;
+    }
+    .panel-default>.panel-heading{
+        background-color: #00567c;
+        color: #ffffff;
+    }
+    .nisum-color {
+        background-color: #00567c;
+        color:#ffffff;
+    }
+    .btn:hover{
+        background-color: #00b3e3;
+        color:#ffffff;
+    }
+    .container h3{
+        text-align: center;
+        font-weight: bold;
+    }
+.btn{
+    margin-left: 40%;
+}
+.pull-center{
+    margin-left: 30%
+}
+
+/*  new css */
+.fa-info-circle {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.fa-info-circle .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.fa-info-circle .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.fa-info-circle:hover .tooltiptext {
+    visibility: visible;
+}
+
+</style>    
+</head>
+    
+    <body onload="setupAuth2()" data-gr-c-s-loaded="true" background="./assets/plan-back1.png">
+      
+            
+             
+              
+        <div class="row col-sm-10 logo">
+                         <img src="./assets/nisum_large.svg" width="324" height="113" alt="NisumTimesheet">
+                    </div>
+                    
+    <div class="container">
+        <div class="row login-nisum">
+
+            <div class="col-md-3">
+                
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-xs-8 nisum-credentials">
+                        <img src="./assets/ehour-logo.JPG" class="pull-left" width="200" height="50" alt="ehour logo"/>
+                        <br/>
+                        <br/>
+                        <div class="panel panel-default">
+                            <div class="panel-heading nisum-color">
+                                <h3 class="panel-title">Log In</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form" role="form" id="loginform" method="post" action="./login?-1.IFormSubmitListener-loginform"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden"><input type="hidden" name="loginform_hf_0" id="loginform_hf_0"></div>
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <div class="col-sm-1">&nbsp;</div>
+                                            <div class="col-sm-10">
+      
+                                        </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-1">&nbsp;</div>
+                                            
+                                        </div>
+                                        <div class="google-signIn">
+                                            <span class="google-text">QUICK Sign in : </span>
+                                                <a href="#" onclick="return loginWithG()">
+                                                     <!--<img src="C:\Users\Nisum\Desktop\one time.JPG" width="70" height="70" alt="ehour logo"/>-->
+                                                </a>
+                                        </div>
+                                <div class="or">
+                                    (OR)
+                                </div>
+                                <hr>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="username" class="form-control" id="username" value="" name="username">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="password" value="" name="password" placeholder="password">
+                                        </div>
+                                        <button class="btn btn-default button nisum-color" id="loginSubmit">
+                                            Sign in 
+                                        </button><br/><br/>
+                                        <div class="pull-center"><b>Problems Signing In &nbsp;</b><a href="#" onclick="return loginWithG()"  data-toggle="modal" data-target="#myModal"><i class="hover fa fa-info-circle" ><span class="tooltiptext">Click for instructions</span></i></a>
+                                          
+                                             <!-- The Modal -->
+              <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                      
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title">Modal Heading</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                          Modal body..
+                        </div>
+                        
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                                            <!-- <div class="modal fade" id="mymodal">
+                                                <div class="modal-dialog modal-sm">
+                                                    <div class="modal-content">
+                                                        <div>
+                                                             <ul>
+                                                                <li>It is mandatory that everyone fill timesheets into this tool by end of Friday every week.</li>
+                                                                <li><img src="./assets/new_icon.png" height="25" width="25">If you don't see your projects assignments, please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbQP6_omM_hDpeskrPjHzcq67tBOjP3kK60ddNqhLSgi9gEQ/viewform">PROJECT ASSIGNMENTS REQUEST</a> to add your petition. The admin will have until the upcoming WEDNESDAY to solve them, therefore raise it before that happens.</li>
+                                                                <li><img src="./assets/new_icon.png" height="25" width="25">If you need to unlock your previous weeks, please go to this <a href="https://docs.google.com/forms/d/e/1FAIpQLScVMQnQnOloRmqG0zPjxMUyE73xLpeyairRcprhuESRJkr_2w/viewform?c=0&amp;w=1">UNLOCK REQUEST</a> to initiate a requirement.</li>
+                                                                <li>If you run into problems/have suggestions/improvements about the timesheet application itself, please send your queries to <a href="mailto:GL_PR_ehourteam@nisum.com">GL_PR_ehourteam@nisum.com</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>    
+                                                </div>
+
+                                            </div> -->
+                                    </fieldset>
+                                   
+    
+                                    <input type="hidden" id="idToken" value="" name="idToken">
+    
+                                </form>
+                            </div>
+                            <div class="panel-footer nisum-color">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <iframe aria-hidden="true" id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" style="position: right; width: 1px; height: 1px; left: -9999px;margin-left: 50% display: none;" src="https://accounts.google.com/o/oauth2/iframe#origin=http%3A%2F%2Flocalhost%3A8080&amp;rpcToken=482130211.41069067&amp;clearCache=1"></iframe></body></html>
