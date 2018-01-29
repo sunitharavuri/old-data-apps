@@ -1,0 +1,228 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+body {
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: 'Montserrat';
+  min-height: 100vh;
+}
+
+th {
+  font-weight: 700;
+}
+
+.main {
+  position: relative;
+}
+.main:after {
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../images/bg11.jpg), no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  opacity : 0.2;
+  z-index: -1;
+}
+
+.banner--color {
+  color: #F6E9DC;
+}
+
+.navbar {
+  background-color: #e3f2fd;
+  padding-bottom: 1%;
+}
+
+.nisum-logo {
+  margin: 0 auto;
+  width: 25%;
+}
+
+.navbar--download {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  color: #d34836;
+}
+
+.calendar--small {
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  border-spacing: 0;
+  margin: 2em auto;
+}
+
+.calendar--small__holidays {
+  background-color: lightgreen;
+  text-align: center;
+}
+
+.calendar--small a {
+  text-decoration: none;
+}
+
+.calendar--small thead th {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e56568), color-stop(100%, #bd3f41));
+  background-image: -webkit-linear-gradient(top, #e56568, #bd3f41);
+  background-image: -moz-linear-gradient(top, #e56568, #bd3f41);
+  background-image: -ms-linear-gradient(top, #e56568, #bd3f41);
+  background-image: -o-linear-gradient(top, #e56568, #bd3f41);
+  background-image: linear-gradient(top, #e56568, #bd3f41);
+  font-size: 13pt;
+  font-weight: bold;
+  padding: 8px 0;
+  text-align: center;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.calendar--small__left__arrow:first-child {
+  text-align: right;
+}
+
+.calendar--small__right__arrow:last-child {
+  text-align: left;
+}
+
+.calendar--small__weekday--header {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #d4d4d4;
+  color: #666;
+  font-size: 7.5pt;
+  font-weight: normal;
+  padding: 4px 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  text-transform: uppercase;
+}
+
+.calendar--small__weekday--header:first-child {
+  border-left: 1px solid #abb6bf;
+}
+
+.calendar--small__weekday--header:last-child {
+  border-right: 1px solid #abb6bf;
+}
+
+.calendar--small__previous {
+  font-weight: bold;
+}
+
+.calendar--small tbody td {
+  background-color: aliceblue;
+  border-bottom: 1px solid #e2e2e2;
+  border-left: 1px solid #e2e2e2;
+  font-size: 11pt;
+  height: 27px !important;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.calendar--small tbody td.calendar--small__holidays {
+  background-color: lightgreen;
+}
+
+.calendar--small tbody td.calendar--small__today {
+  background-color: lightsalmon;
+  border-left: 1px solid #c4c4c2;
+  border-bottom: 1px solid #c4c4c2;
+}
+
+.calendar--small tbody td.calendar--small__last-week {
+  border-bottom: 1px solid #c4c4c2;
+}
+
+.calendar--small tbody td.calendar--small__tomorrow {
+  border-left: 1px solid #c4c4c2;
+}
+
+.calendar--small__off {
+  color: #d8dbde;
+}
+
+.calendar--small tbody td:last-child {
+  border-right: 1px solid #abb6bf;
+}
+
+.calendar--small tbody td:first-child {
+  border-left: 1px solid #abb6bf;
+}
+
+.month--overview__banner {
+  text-align: center;
+  padding: .75rem;
+}
+
+.month--overview__banner h1 {
+  background-color: #4E4F4A;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  padding: .5rem 2rem;
+  text-transform: uppercase;
+}
+
+.instructions--title {
+  padding: 5%;
+}
+
+.calendar--month--overview {
+  background-color: aliceblue;
+  margin-bottom: 5%;
+  table-display: fixed;
+  width: 100%;
+}
+
+.calendar__day__header,
+.calendar__day__cell {
+  border: 2px solid #e66053;
+  height: 3em;
+  text-align: center;
+  width: 14.29%;
+}
+
+.calendar__day__header {
+  letter-spacing: 0.1em;
+  padding: 1.5rem 0;
+  text-transform: uppercase;
+}
+
+.calendar__day__cell {
+  font-size: 2.5rem;
+  padding: .1rem 0 1.5rem 0;
+  position: relative;
+}
+
+tr:nth-child(odd) > .calendar__day__cell:nth-child(odd) {
+  color: #e66053;
+}
+
+tr:nth-child(even) > .calendar__day__cell:nth-child(even) {
+  color: #e66053;
+}
+
+.calendar__day__data {
+  color: black;
+  display: block;
+  font-size: 1.3rem;
+  bottom: 5%;
+  position: absolute;
+  width: 95%;
+  text-align: right;
+}

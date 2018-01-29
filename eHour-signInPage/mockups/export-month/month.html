@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Export Month</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="month.css">
+</head>
+
+<body>
+    
+    <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" id="logo" href="#">
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">
+                    <img style="max-width:100px; margin-top: -15px;" src="./images/logo.svg" alt="NisumTimesheet">
+
+                    <img src="./images/xx.svg" alt="NisumTimesheet">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user-circle"></i> User Name
+                            <span class="caret"></span>
+                        </a>
+                        <ul id="g-account-menu" class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user-secret"></i> My Profile</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i> Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- /container -->
+    </div>
+    <div id="body">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <div class="well">
+     
+           <ul class="nav nav-pills nav-stacked" >  
+            
+                
+                <li>
+                    <a href="#">
+                        <i class="fa fa-lock"></i> Export month</a>
+                    <p> Check the projects you want to export and optionally you can include space for a sign-off signature by
+                        you and your manager. Only projects that are valid for the selected month are shown.</p>
+                </li>
+
+            </ul>
+        </div>
+        </div>
+        <!-- /span-3 -->
+        <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12">
+            <!-- Right -->
+
+            <a href="#">
+                <strong>
+                     <h4>Export timesheet of October 2017</h4>
+                </strong>
+            </a>
+            
+            <!-- <div class="container"> -->
+                    
+                    <div class="well content-container">
+                        <form id="checkboxForm" method="post" class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-xs-3 control-label">Projects to include:</label>
+                                    <div class="col-xs-6">
+                                        <h5>Billable Projects</h5>
+                                        <div class="radio">
+                                            <input type="radio" name="job" value="designer" id="designerRadio" class="styled" />
+                                            <label for="designerRadio">Check all</label>
+                                        </div>
+                                    
+                                        <div class="radio">
+                                            <input type="radio" name="job" value="frontend" id="frontendRadio" class="styled" />
+                                            <label for="frontendRadio">NOB :EhourUI-Ehour - UI</label>
+                                        </div>
+                            
+                                
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label class="col-xs-3 control-label"></label>
+                                    <!-- <h4>Not Billable</h4> -->
+                                    <div class="col-xs-6">
+                                            <h5>Not Billable</h5>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="languages[]" value="net" id="netCheckbox" class="styled" />
+                                            <label for="netCheckbox">Check all</label>
+                                        </div>
+                            
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="languages[]" value="java" id="javaCheckbox" class="styled" />
+                                            <label for="javaCheckbox">NOB:PTO -01-PTO</label>
+                                        </div>
+                            
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="languages[]" value="c" id="cCheckbox" class="styled" />
+                                            <label for="cCheckbox">NOB:Reserved-02-Reserved for Future Client Work</label>
+                                        </div>
+                            
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="languages[]" value="php" id="phpCheckbox" class="styled" />
+                                            <label for="phpCheckbox">NOB:SHADOW -02-Shadow</label>
+                                        </div>
+                            
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="languages[]" value="perl" id="perlCheckbox" class="styled" />
+                                            <label for="perlCheckbox">NOB:Unassigned-020Unassigned</label>
+                                        </div>
+                            
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="languages[]" value="ruby" id="rubyCheckbox" class="styled" />
+                                            <label for="rubyCheckbox">NOB:Education -03-Education</label>
+                                        </div>
+                            
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="languages[]" value="python" id="pythonCheckbox" class="styled" />
+                                            <label for="pythonCheckbox">NOB:IP Development - 03-Intellectual Property Development</label>
+                                        </div>
+                            
+                                        <!-- <div class="checkbox">
+                                            <input type="checkbox" name="languages[]" value="javascript" id="javascriptCheckbox" class="styled" />
+                                            <label for="javascriptCheckbox">Javascript</label>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                        <label class="col-xs-3 control-label">
+                                                
+                                                Reserve space for sign-off signatures?</label>
+                                        <!-- <div class="col-xs-6">
+                                            <h5>Billable Projects</h5>
+                                            <div class="radio">
+                                                <input type="radio" name="job" value="designer" id="designerRadio" class="styled" />
+                                                <label for="designerRadio">Check all</label>
+                                            </div>
+                                        
+                                            <div class="radio">
+                                                <input type="radio" name="job" value="frontend" id="frontendRadio" class="styled" />
+                                                <label for="frontendRadio">NOB :EhourUI-Ehour - UI</label>
+                                            </div>
+                                
+                                    
+                                        </div> -->
+                                    </div>
+                            
+                                <div class="form-group">
+                                    <div class="col-xs-5 col-xs-offset-3">
+                                        <button type="submit" class="btn btn-default">Export to excel</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                    <!-- </div> -->
+            </div>
+        </div>
+    </div>
+ 
+
+ </div>
+
+
+</body>
+
+</html>

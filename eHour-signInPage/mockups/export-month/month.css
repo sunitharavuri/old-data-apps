@@ -1,0 +1,45 @@
+body{
+    background-image: url("./images/plan-back1.png");
+    /* background: no-repeat; */
+}
+.navbar-inverse
+{
+    background:#00567c;
+    border-bottom-color: #004D40;
+}
+.navbar-inverse .navbar-nav>li>a,.navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav>.dropdown>a .caret
+{
+    color: #fff;
+}
+/* .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus,
+.navbar-nav>li>.dropdown-menu
+{
+    background:#00567c;
+}
+.nav-pills>li>a,
+{
+    color: #00567c;
+} */
+
+/* .nav>li>a:hover, .nav>li>a:focus
+{
+    background-color: #EEEEEE;
+} */
+/* .navbar-brand #logo{
+    margin-top:none;
+} */
+
+
+/* https://res.cloudinary.com/spiralyze/image/upload/v1504200846/TimeDoctor/pricingcard-bkgrnd-image.jpg */
+.well{
+    /* background-image: url("https://msctime.com/wp-content/uploads/2014/04/gradient-back.jpg"); */
+    /* background-image: "./images/plan-back1.png"; */
+    background: linear-gradient(#00b2e2 -250px,white );
+    /* background: linear-gradient(#00b2e2c2 -250px,white ); */
+    
+
+}
+.content-container {
+    width: 100%;
+    
+  }

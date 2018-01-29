@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+<body>
+
+<!-- <button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p> -->
+<button>Rest call</button>
+
+ <script>
+    // $.support.cors = true;
+    $(document).ready(function(){
+    $("button").click(function(){
+        $.get("https://dev-timesheets.mynisum.com/eh/rest/config/health-check", function(response, status){
+           console.log("Response: " + response.data+ "\nStatus: " + status);
+        });
+    });
+});
+//     $.ajax({
+//     url: 'https://dev-timesheets.mynisum.com/eh/rest/config/health-check',
+//     headers: {
+//         'Content-Type': 'application/x-www-form-urlencoded'
+//     },
+//     type: "POST", 
+//     dataType: "json",
+//     data: {
+//     },
+//     success: function (result) {
+//         console.log(result);
+//     },
+//     error: function () {
+//         console.log("error");
+//     }
+// }); -->
+ 
+//  <script>
+// function loadDoc() {
+// //     var ItemJSON;
+// //     ItemJSON = '[{"status":"SUCCESS","response":{"environment":"DEV","ciVersion":"1.4.3n-469","buildNumber":"469","ehourHome":"/opt/ehour","ehourUrl":"https://dev-timesheets.mynisum.com"}}]'
+//    var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//       document.getElementById("demo").innerHTML = this.responseText;
+//     }
+//   };
+//   xhttp.open("POST", "https://dev-timesheets.mynisum.com/eh/rest/config/health-check", false);
+//   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+//   xhttp.send();
+// } 
+ </script>
+
+</body>
+</html>

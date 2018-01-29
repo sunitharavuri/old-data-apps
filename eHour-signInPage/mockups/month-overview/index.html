@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Calendar Mockup</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="main">
+<div class="container">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+        <img class="nisum-logo img-responsive" src="../images/logo.svg" alt="NisumTimesheet">
+    <ul class="nav navbar-nav">
+      <li><a href="#">Enter hours</a></li>
+      <li class="active"><a href="#">Month Overview</a></li>
+      <li><a href="#">Export Month</a></li>
+      <li><a href="#">Reporting</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="navbar--download"><a href="#"><i class="fa fa-android fa-lg" aria-hidden="true"></i> Download for Android</a></li>
+      <li><p>&nbsp;</p></li>
+      <li class="navbar--download"><a href="#"><i class="fa fa-apple fa-lg" aria-hidden="true"></i> Download for Android</a></li>
+      <li><a href="#">User</a></li>
+      <li><a href="#">Sign-Out</a></li>
+    </ul>
+  </div>
+</nav>
+  <div class="row">
+    <div class="col-sm-3">
+      <table class="calendar--small">
+        <tr>
+          <th class="calendar--small__holidays" colspan="7">2018 Holidays</th>
+        </tr>
+        <thead class="banner--color">
+        <tr>
+          <th class="calendar--small__left__arrow"><a href="" class="banner--color">◀</a></th>
+          <th colspan="5">
+            January 2020
+          </th>
+          <th class="calendar--small__right__arrow"class="arrow"><a href="" class="banner--color">▶</a></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th class="calendar--small__weekday--header">Sun</th>
+          <th class="calendar--small__weekday--header">Mon</th>
+          <th class="calendar--small__weekday--header">Tue</th>
+          <th class="calendar--small__weekday--header">Wed</th>
+          <th class="calendar--small__weekday--header">Thu</th>
+          <th class="calendar--small__weekday--header">Fri</th>
+          <th class="calendar--small__weekday--header">Sat</th>
+        </tr>
+        <tr>
+          <td class="calendar--small__off calendar--small__previous">29</td>
+          <td class="calendar--small__off calendar--small__previous">30</td>
+          <td class="calendar--small__off calendar--small__previous">31</td>
+          <td class="calendar--small__previous calendar--small__holidays">1</td>
+          <td class="calendar--small__previous">2</td>
+          <td class="calendar--small__previous">3</td>
+          <td class="calendar--small__previous">4</td>
+        </tr>
+        <tr>
+          <td class="calendar--small__previous calendar--small__last-week">5</td>
+          <td class="calendar--small__previous">6</td>
+          <td class="calendar--small__previous">7</td>
+          <td class="calendar--small__previous">8</td>
+          <td class="calendar--small__previous">9</td>
+          <td class="calendar--small__previous">10</td>
+          <td class="calendar--small__previous">11</td>
+        </tr>
+        <tr>
+          <td class="calendar--small__today">12</td>
+          <td class="calendar--small__tomorrow">13</td>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+          <td>30</td>
+          <td>31</td>
+          <td class="calendar--small__off">1</td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="instructions">
+        <h3 class="instructions--title"><strong>Month Overview</strong></h3>
+        <p>On this page you see an aggregated amount of the hours you booked per project for the selected month and (if enabled by the administrator) the turnover that was created per project.
+        <br />
+        <br />
+          Select a different month using the navigation calendar on the top left. Move to a next or previous month using the arrows next to the month. In the calendar, days that are printed in bold are completely booked.
+        <br />
+        <br />
+        To enter hours for a week, hover your mouse over that week and click on it.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <table class="table table-striped">
+        <caption class="month--overview__banner">
+          <h1 class="banner--color">Aggregated hours: January 2020</h1>
+        </caption>
+        <thead>
+        <tr>
+          <th scope="col">Client</th>
+          <th scope="col">Project</th>
+          <th scope="col">Project Code</th>
+          <th scope="col">Rate</th>
+          <th scope="col">Hours</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>GOOGLE</th>
+          <td>Self-Driving Cars</td>
+          <td>PROJ-1</td>
+          <td>0</td>
+          <td>152</td>
+        </tr>
+        <tr>
+          <th scope="row">Nisum Non-Billable</th>
+          <td>PTO</td>
+          <td>PTO</td>
+          <td>0</td>
+          <td>8</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <table class="calendar--month--overview">
+        <caption class="month--overview__banner">
+          <h1 class="banner--color">Month Overview</h1>
+        </caption>
+        <thead>
+        <tr>
+          <th class="calendar__day__header">Sun</th>
+          <th class="calendar__day__header">Mon</th>
+          <th class="calendar__day__header">Tues</th>
+          <th class="calendar__day__header">Wed</th>
+          <th class="calendar__day__header">Thurs</th>
+          <th class="calendar__day__header">Fri</th>
+          <th class="calendar__day__header">Sat</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="calendar__day__cell"></td>
+          <td class="calendar__day__cell"></td>
+          <td class="calendar__day__cell"></td>
+          <td class="calendar__day__cell">1<span class="calendar__day__data">8.00 Hours <br/>PROJ-1</span></td>
+          <td class="calendar__day__cell">2<span class="calendar__day__data">8.00 Hours <br/>PROJ-1</span></td>
+          <td class="calendar__day__cell">3<span class="calendar__day__data">8.00 Hours <br/>PROJ-1</span></td>
+          <td class="calendar__day__cell">4</td>
+        </tr>
+        <tr>
+          <td class="calendar__day__cell">5</td>
+          <td class="calendar__day__cell">6<span class="calendar__day__data">8.00 Hours <br/>PROJ-1</span></td>
+          <td class="calendar__day__cell">7<span class="calendar__day__data">8.00 Hours <br/>PROJ-1</span></td>
+          <td class="calendar__day__cell">8<span class="calendar__day__data">8.00 Hours <br/>PROJ-1</span></td>
+          <td class="calendar__day__cell">9<span class="calendar__day__data">8.00 Hours <br/>PROJ-1</span></td>
+          <td class="calendar__day__cell">10<span class="calendar__day__data">8.00 Hours <br/>PROJ-1</span></td>
+          <td class="calendar__day__cell">11</td>
+        </tr>
+        <tr>
+          <td class="calendar__day__cell">12</td>
+          <td class="calendar__day__cell">13</td>
+          <td class="calendar__day__cell">14</td>
+          <td class="calendar__day__cell">15</td>
+          <td class="calendar__day__cell">16</td>
+          <td class="calendar__day__cell">17</td>
+          <td class="calendar__day__cell">18</td>
+        </tr>
+        <tr>
+          <td class="calendar__day__cell">19</td>
+          <td class="calendar__day__cell">20</td>
+          <td class="calendar__day__cell">21</td>
+          <td class="calendar__day__cell">22</td>
+          <td class="calendar__day__cell">23</td>
+          <td class="calendar__day__cell">24</td>
+          <td class="calendar__day__cell">25</td>
+        </tr>
+        <tr>
+          <td class="calendar__day__cell">26</td>
+          <td class="calendar__day__cell">27</td>
+          <td class="calendar__day__cell">28</td>
+          <td class="calendar__day__cell">29</td>
+          <td class="calendar__day__cell">30</td>
+          <td class="calendar__day__cell">31</td>
+          <td class="calendar__day__cell"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>
