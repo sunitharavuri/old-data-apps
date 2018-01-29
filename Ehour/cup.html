@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eHour-Sign in (sample)</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="cup.css">
+</head>
+
+<body>
+    <div class="container">
+       <div class="nisum-logo"><img src="./images/nisum_large.svg" width="324" height="113" alt="NisumTimesheet"></div>
+       <div class="apps">  
+           <ul id="app-list">  
+               <li> <h3>Get the eHour App </h3></li>
+               <li><a><img src="./images/android.png" width="100" height="50"></a></li>
+               <li> <a><img src="./images/app-store.png" width="80" height="40"></a> </li>
+           </ul>  
+        </div>
+       <header>
+            
+            <h1>  Welcome to the Nisum Timesheet Tool</h1>
+
+        </header>
+        <section>
+            <div id="container_demo">
+                <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                <a class="hiddenanchor" id="tosignin"></a>
+                <a class="hiddenanchor" id="toinstructios"></a>
+                <div id="wrapper">
+                    <div id="instructions" class="animate form">
+
+                        <h1>Instructions</h1>
+                       
+                              <p> You can now sign in with your ehour username password or using your Nisum Gmail Account by clicking the button <i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i>to get into
+                                your timesheet account.
+                                </p> 
+                             <ul>
+                            
+                            <li>It is mandatory that everyone fill timesheets into this tool by end of Friday every week.</li>
+                            <li>If you do not see your project assignment(s) / need to unlock your previous weeks to enter time,
+                                please send an email to
+                                <a>GL_PR_ehour-admin@nisum.com</a></li>
+                            <li>If you run into problems/have suggestions/improvements about the timesheet application itself,
+                                please send your queries to<a>GL_PR_ehourteam@nisum.co</a> </li>
+                               <br>
+                               <br>
+                        </ul>
+                        <!-- <div align="center">
+                            <a><img src="./images/login_apple.png" width="12%" height="12%"></a>
+                            <a><img src="./images/login_android.png" width="12%" height="12%"></a>
+                        </div> -->
+                        <p class="change_link">
+                            Is everything OK ?
+                            <a href="#tosignin" class="to_register">Plase Login</a>
+                        </p>
+
+                    </div>
+
+                    <div id="login" class="animate form">
+                        <!-- <div><img src="./images/nisum_large.svg" width="324" height="113" alt="NisumTimesheet"></div> -->
+                        <form action="" autocomplete="on">
+                            <h1> Login </h1>
+                            <p><span id="google-signin"> QUICK  Sign In:</span><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></p>
+                            <div class="OR">
+                                (OR)
+                            </div>
+                            <hr>
+                            <p>
+                                <label for="usernamesignup" class="uname">Your username</label>
+                                <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="*username" />
+                            </p>
+
+                            <p>
+                                <label for="passwordsignup" class="youpasswd">Your password </label>
+                                <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="*password" />
+                            </p>
+                            
+
+                            <p class="signin button">
+                                <input type="submit" value="Sign in" />
+                            </p>
+                            <p class="change_link">
+                                Problem with signing in?
+                                <a href="#toinstructions" class="to_register">Go to Instructions  </a>
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
