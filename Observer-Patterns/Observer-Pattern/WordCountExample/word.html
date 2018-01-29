@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" href="word.css">
+    </head>
+<body>
+       
+<h1>Observer-Pattern </h1>
+<p>The Observer is a design pattern where an object (known as a subject) maintains a list of objects 
+    depending on it (observers), automatically notifying them of any changes to state.</p>
+<p> If we need a way to update parts of a page in response to certain events, with the data these provide
+    For example user input that you then project into one or many components. This leads into a lot of push-and-pull 
+    in the code to keep everything in sync.For this we use Observer Pattern  it enables one-to-many data binding
+     between elements. This one-way data binding can be event driven. With this pattern, you can build reusable 
+     code that solves for your specific needs.
+</p>
+<h1>A high-level view of the pattern looks like this:</h1>
+        
+      <p> EventObserver
+        │ 
+        ├── subscribe: adds new observable events
+        │ 
+        ├── unsubscribe: removes observable events
+        |
+        └── broadcast: executes all events with bound data</p> 
+
+<textarea id="blogPost" placeholder="Enter your blog post..." class="blogPost"></textarea>
+
+<script src="word.js"></script>
+
+
+</body>
+</html>

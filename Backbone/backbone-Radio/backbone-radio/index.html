@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Backbone.js -Radio</title>
+        
+            <!-- <link rel="stylesheet" href="assets/css/bootstrap-1.2.0.min.css" /> -->
+            <!-- <link rel="stylesheet" href="assets/css/styles.css" />
+         -->
+           
+        
+        </head>
+</head>
+<body>
+
+        <p>The Radio does job ,that letting you perform actions across your
+           application without needing to maintain references to otherwise unrelated views or models.</p>
+<h3>How Radio Works???</h3> 
+<p>The Radio works by using the Backbone Events system you may be familiar with. 
+   You can fire an event on your Radio and any other objects listening to that event 
+   will pick it up and respond.</p>
+   
+   <p>The Radio also provides an API for handling Request/Response patterns — essentially 
+       functions called without having direct access to them.</p>
+      <p>
+          <h4>The Radio message bus exposes some core concepts:</h4>
+            
+            <strong>Channel </strong>- a namespace mechanism.This minimizes the chances of naming collisions across the app,
+             and provides additional semantic guidance for future readers of the code<br>
+            <strong>Event</strong>  - alert other parts of your application that something happened.The Radio Event works exactly 
+            the same way as regular Backbone Events like model/collection events. In fact, it uses the Backbone.
+            Events mixin internally, exposing its API:<br>
+            <strong> Request</strong>  - execute single functions in a different part of your application.
+        </p>
+
+ <h3>Radio Patterns</h3>  
+ <p>The Backbone Radio provides two major patterns: Events and Requests.</p>    
+
+ <script src="assets/js/lib/jquery-1.6.4.min.js"></script>
+ <script src="assets/js/lib/underscore-min.js"></script>
+ <script src="assets/js/lib/backbone-min.js"></script>
+
+    <script src="assets/js/channel.js"></script>
+    <script src="assets/js/events.js"></script>
+    <script src="assets/js/request.js"></script>
+    
+</body>
+</html>
+

@@ -1,0 +1,8 @@
+{
+   "user": "root",
+    "database": "ehour",
+    "password": "welcome",
+    "secret" : "password",
+    "dialect": "mysql"
+    
+  }

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>m-reporting</title>
+    <!-- <link type="text/css" href="../css/ehour/jquery-ui.min.css" rel="stylesheet"/> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/font-awesome.min.css"/> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+    <style>
+        body {
+            background: white;
+            font: 1.5em Geneva, Arial, Helvetica, sans-serif;
+            color: black;
+            margin: 0;
+            padding-bottom: 50px;
+        }
+        .dateInput {
+    width: 5em;
+    clear: both
+}
+.dateCriteria {
+    width: 10em;
+    float: left;
+}
+
+.dateInputLoc {
+    float: left;
+    margin-bottom: 5px;
+}
+
+
+
+
+        /* .dateContainer {
+    float: left;
+    vertical-align: bottom;
+    padding-left: 20px;
+    margin: 0;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Name Report</h3>
+        <div class="well">
+            <form>
+                <div>
+
+                    <span id="id24a" style="display:none"></span>
+                    <span id="id24b" style="display:none"></span>
+                    <div class="dateCriteria">
+                        Report from:
+                    </div>
+
+                    <div class="dateInputLoc">
+
+                        <input class="dateInput" type="text" value="11/1/17" name="dateStart" id="id234" /> &nbsp;&nbsp; until &nbsp;&nbsp;
+                        <input class="dateInput" type="text" value="11/30/17" name="dateEnd" id="id235" />
+                    </div>
+                    <br clear="all" />
+
+                    <div class="dateCriteria">
+                        Quick selection:
+                    </div>
+                    <div class="dateInputLoc">
+                        <select class="textInputSmall" name="quickWeek" id="id237">
+                            <option selected="selected" value="">Quick week</option>
+                            <option value="0">Previous week</option>
+                            <option value="1">Current week</option>
+                            <option value="2">Next week</option>
+                            <option value="3" disabled>──────────</option>
+                            <option value="4">Week 39</option>
+                            <option value="5">Week 40</option>
+                            <option value="6">Week 41</option>
+                            <option value="7">Week 42</option>
+                            <option value="8">Week 43</option>
+                            <option value="9">Week 44</option>
+                            <option value="10">Week 45</option>
+                            <option value="11">Week 46</option>
+                            <option value="12">Week 47</option>
+                            <option value="13">Week 48</option>
+                            <option value="14">Week 49</option>
+                            <option value="15">Week 50</option>
+                            <option value="16">Week 51</option>
+                            <option value="17">Week 52</option>
+                            <option value="18">Week 1</option>
+                            <option value="19">Week 2</option>
+                        </select>
+                        <select class="textInputSmall" name="quickMonth" id="id238">
+                            <option selected="selected" value="">Quick month</option>
+                            <option value="0">Previous month</option>
+                            <option value="1">Current month</option>
+                            <option value="2">Next month</option>
+                            <option value="3" disabled>──────────</option>
+                            <option value="4">May, 2017</option>
+                            <option value="5">June, 2017</option>
+                            <option value="6">July, 2017</option>
+                            <option value="7">August, 2017</option>
+                            <option value="8">September, 2017</option>
+                            <option value="9">October, 2017</option>
+                            <option value="10">November, 2017</option>
+                            <option value="11">December, 2017</option>
+                            <option value="12">January, 2018</option>
+                            <option value="13">February, 2018</option>
+                            <option value="14">March, 2018</option>
+                            <option value="15">April, 2018</option>
+                        </select>
+                        <select class="textInputSmall" name="quickQuarter" id="id239">
+                            <option selected="selected" value="">Quick quarter</option>
+                            <option value="0">Previous quarter</option>
+                            <option value="1">Current quarter</option>
+                            <option value="2">Next quarter</option>
+                            <option value="3" disabled>──────────</option>
+                            <option value="4">Quarter 1, 2017</option>
+                            <option value="5">Quarter 2, 2017</option>
+                            <option value="6">Quarter 3, 2017</option>
+                            <option value="7">Quarter 4, 2017</option>
+                            <option value="8">Quarter 1, 2018</option>
+                            <option value="9">Quarter 2, 2018</option>
+                        </select>
+                    </div>
+
+                    <br clear="all" />
+
+
+                    <div class="dateCriteria">
+                        By locked period:
+                    </div>
+
+                    <div class="dateInputLoc">
+                        <select class="textInputSmall" name="lockedDate" id="id23a">
+                            <option selected="selected" value="">None</option>
+                            <option value="0">Week 40, 2016</option>
+                            <option value="1">Week 39, 2016</option>
+                            <option value="2">Week 41, 2016</option>
+                            <option value="3">Week 42, 2016</option>
+                            <option value="4">Week 43, 2016</option>
+                            <option value="5">Week 44, 2016</option>
+                            <option value="6">Week 45, 2016</option>
+                            <option value="7">Week 46, 2016</option>
+                            <option value="8">Week 47, 2016</option>
+                            <option value="9">Week 48, 2016</option>
+                            <option value="10">Week 49, 2016</option>
+                            <option value="11">Week 50, 2016</option>
+                            <option value="12">January, 2017</option>
+                            <option value="13">Week 8, 2017</option>
+                            <option value="14">Week 9, 2017</option>
+                            <option value="15">Week 10, 2017</option>
+                            <option value="16">Week 12, 2017</option>
+                            <option value="17">Week 6, 2017</option>
+                            <option value="18">Week 5, 2017</option>
+                            <option value="19">Week 14, 2017</option>
+                            <option value="20">Week 15, 2017</option>
+                            <option value="21">Week 17, 2017</option>
+                            <option value="22">Week 18, 2017</option>
+                            <option value="23">Week 19, 2017</option>
+                            <option value="24">Week 20, 2017</option>
+                            <option value="25">Week 21, 2017</option>
+                            <option value="26">Week 22, 2017</option>
+                            <option value="27">Week 23, 2017</option>
+                            <option value="28">Week 24, 2017</option>
+                            <option value="29">Week 25, 2017</option>
+                            <option value="30">Week 26, 2017</option>
+                            <option value="31">Week 27, 2017</option>
+                            <option value="32">Week 28, 2017</option>
+                            <option value="33">Week 29, 2017</option>
+                            <option value="34">Week 30, 2017</option>
+                            <option value="35">Week 31, 2017</option>
+                            <option value="36">Week 33, 2017</option>
+                            <option value="37">Auto-Week 34, 2017</option>
+                            <option value="38">Auto-Week 35, 2017</option>
+                            <option value="39">Auto-Week 36, 2017</option>
+                            <option value="40">Auto-Week 37, 2017</option>
+                            <option value="41">Auto-Week 38, 2017</option>
+                            <option value="42">Auto-Week 39, 2017</option>
+                            <option value="43">Auto-Week 40, 2017</option>
+                            <option value="44">Week 32, 2017</option>
+                            <option value="45">Auto-Week 41, 2017</option>
+                            <option value="46">Auto-Week 42, 2017</option>
+                            <option value="47">Auto-Week 43, 2017</option>
+                            <option value="48">Auto-Week 44, 2017</option>
+                            <option value="49">Auto-Week 45, 2017</option>
+                            <option value="50">Auto-Week 46, 2017</option>
+                        </select>
+                    </div>
+
+                    <br clear="all" />
+
+
+                    <div class="dateCriteria">
+                        Location:
+                    </div>
+
+                    <div class="dateInputLoc">
+                        <select class="textInputSmall" name="countryFilter" id="id23b">
+                            <option selected="selected" value="">Choose country</option>
+                            <option value="0">United States</option>
+                            <option value="1">Chile</option>
+                            <option value="2">India</option>
+                            <option value="3">Pakistan</option>
+                            <option value="4">Argentina</option>
+                            <option value="5">Undetermined</option>
+                        </select>
+                        <select class="textInputSmall" name="regionFilter" id="id23c">
+                            <option selected="selected" value="">Choose region</option>
+                        </select>
+                        <select class="textInputSmall" name="locationFilter" id="id23d">
+                            <option selected="selected" value="">Choose location</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div style="float: right; margin-right: 15px">
+
+                </div>
+
+
+                <br/>
+                <br/>
+                <b>Client filter</b>
+                <div id="customerFilter" class="filterContainer hidden">
+                    <input id="customerFilterInput" class="textInput searchInput floatLeft" type="text" placeholder="Filter..." /> &nbsp;&nbsp; Sort on
+                    <select class="textInputSmall" name="customerProjectsBorder:customerProjectsBorder_body:customerSort"
+                        id="id23f">
+                        <option value="0">Name</option>
+                        <option selected="selected" value="1">Name</option>
+                        <option value="2">Code</option>
+                        <option value="3">Name</option>
+                    </select>
+                    <br/>
+                </div>
+<!-- 
+                <br clear="all" />
+
+                <div>
+                    <div class="GreyBlueFrame">
+                        <div class="GreyBlueLeftTop">
+                            <div class="GreyBlueRightTop">
+                                &nbsp;
+                            </div>
+                        </div>-->
+
+
+                        <!-- CUSTOMER SELECTION -->
+                        <!-- <div class="leftColumn">
+                            <div class="foldIcon">
+                                <a id="id240" href="javascript:;" title="Clear selection">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                                <a href="#" onclick="return toggleFilter(&#039;#customerFilter&#039;)" id="customerFold" title="Filter options">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                            </div>
+                             <b>Client filter</b>
+                            <div id="customerFilter" class="filterContainer hidden">
+                                <input id="customerFilterInput" class="textInput searchInput floatLeft" type="text" placeholder="Filter..." /> &nbsp;&nbsp; Sort on
+                                <select class="textInputSmall" name="customerProjectsBorder:customerProjectsBorder_body:customerSort"
+                                    id="id23f">
+                                    <option value="0">Name</option>
+                                    <option selected="selected" value="1">Name</option>
+                                    <option value="2">Code</option>
+                                    <option value="3">Name</option>
+                                </select>
+                                <br/>
+                            </div> 
+
+                            <select id="customerSelect" class="textInputSmall reportCriteriaDropdown" name="customerProjectsBorder:customerProjectsBorder_body:reportCriteria.userSelectedCriteria.customers"
+                                multiple="multiple" size="1">
+                                <option value="5">NOB - Nisum Non-Billable</option>
+                            </select>
+                            <br/>
+
+                            <div class="toggleLabel">
+                                <label id="id23e-w-lbl" for="id23e">Only active clients?</label>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" checked="checked" name="customerProjectsBorder:customerProjectsBorder_body:reportCriteria.userSelectedCriteria.onlyActiveCustomers"
+                                id="id23e" />
+                            <br/>
+                        </div> 
+                        <!-- project      -->
+                        <!-- <div class="rightColumn">
+                            <div class="foldIcon">
+                                <a id="id243" href="javascript:;" title="Clear selection">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+
+                                <a href="#" onclick="return toggleFilter(&#039;#projectFilter&#039;)" id="projectFold" title="Filter options">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                            </div>
+
+                            <b>Project filter</b>
+                            <br/>
+
+                            <div id="projectFilter" class="filterContainer hidden">
+                                <input id="projectFilterInput" class="textInput searchInput floatLeft" type="text" placeholder="Filter..." /> &nbsp;&nbsp; Sort on
+                                <select class="textInputSmall" name="customerProjectsBorder:customerProjectsBorder_body:projectSort"
+                                    id="id242">
+                                    <option value="0">Name</option>
+                                    <option selected="selected" value="1">Name</option>
+                                    <option value="2">Code</option>
+                                    <option value="3">Name</option>
+                                </select>
+                                <br/>
+                            </div>
+
+                            <select id="projectSelect" class="textInputSmall reportCriteriaDropdown" name="customerProjectsBorder:customerProjectsBorder_body:reportCriteria.userSelectedCriteria.projects"
+                                multiple="multiple" size="6">
+                                <option value="2">PTO - 01-PTO</option>
+                                <option value="344">Reserved - 02-Reserved for Future Client Work</option>
+                                <option value="345">shadow - 02-Shadow</option>
+                                <option value="343">Unassigned - 02-Unassigned</option>
+                                <option value="346">Education - 03-Education</option>
+                                <option value="348">IP Development - 03-Intellectual Property Development</option>
+                                <option value="349">Meeting&amp;Events - 03-Internal Meetings and Events</option>
+                                <option value="350">Interviews - 03-Interviews or Recruiting events</option>
+                                <option value="541">Unpaid - 04-Unpaid</option>
+                                <option value="491">ATS-Interns - ATS-Interns</option>
+                                <option value="561">EhourUI - Ehour - UI</option>
+                            </select>
+                            <br/>
+
+                            <div class="toggleLabel">
+                                <label id="id241-w-lbl" for="id241">Only active projects?</label>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" checked="checked" name="customerProjectsBorder:customerProjectsBorder_body:reportCriteria.userSelectedCriteria.onlyActiveProjects"
+                                id="id241" />
+                            <br/>
+                            <div class="toggleLabel">
+                                <label id="reportCriteria.userSelectedCriteria.onlyBillableProjects-w-lbl" for="reportCriteria.userSelectedCriteria.onlyBillableProjects">Only billable projects?</label>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" name="customerProjectsBorder:customerProjectsBorder_body:reportCriteria.userSelectedCriteria.onlyBillableProjects"
+                                id="reportCriteria.userSelectedCriteria.onlyBillableProjects" />
+                        </div>
+
+                        <br clear="all" />
+
+
+                        <div class="GreyBlueLeftBottom">
+                            <div class="GreyBlueRightBottom">
+                                &nbsp;
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br/>
+
+
+
+
+
+                <div class="resetCriteria">
+                    <a class="button" onclick="this.blur();" name="resetCriteria" id="id246">
+                        <span>Clear criteria</span>
+                    </a>
+
+                    <a class="button floatRight" onclick="this.blur();" name="createReport" id="id245">
+                        <span>Create report</span>
+                    </a>
+                </div>
+            </form>
+            <br/>
+            <br/>
+
+        </div>
+
+        <div class="GreyFrameFooter">
+            <p></p>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <br />
+
+    </form>
+
+    </div>
+    </div>  -->
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Objects </p>
+
+
+
+<script>
+
+// The primitive data type String is stored as a value​
+​var person = "Kobe";  
+​var anotherPerson = person; // anotherPerson = the value of person​
+person = "Bryant"; // value of person changed​
+​
+console.log(anotherPerson); // Kobe​
+console.log(person); // Bryant
+
+
+
+var person = {name: "Kobe"};//reference variable
+var anotherPerson = person;
+person.name = "Bryant";
+//value updates which reference variables
+console.log(anotherPerson.name); 
+console.log(person.name); 
+
+
+// var person = {30: "Kobe"};
+// var anotherPerson = person;
+// person["30"] = "Bryant";
+
+// console.log(anotherPerson["30"]); 
+// console.log(person.name); 
+
+var person = {30: "Kobe"};//with number reference
+var anotherPerson = person;
+person["30"] = "Bryant";
+
+console.log(anotherPerson["30"]); 
+console.log(person["30"]); 
+
+
+</script>
+
+</body>
+</html>
+
+

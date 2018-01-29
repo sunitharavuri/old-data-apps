@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>addition of two numbers </title>
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="src/css/main.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <!-- <div class="container">
+       
+       Enter First Number:<input type="number" value"1st_number" placeholder="enter here...">
+       Enter Second Number:<input type="number" value"2nd_number" placeholder="enter here...">
+       <button class="btn btn-primary" onclick="add()">Add</button>
+       <input id="answer">
+    
+    </div> -->
+
+    <h4>addition</h4>
+    <form id="add" action="">
+            <input type="number" placeholder="enter here"><%= number1 %>
+            +
+            <input type="number" placeholder="enter here"><%= number2 %>
+            <button type="submit" value="Add Person">ADD</button>
+    </form>
+    <script id="addtemplate" type="text/template">
+    <span><strong><%= sum %></strong></span> 
+    
+    </script>
+   
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
+    <script src="lib/backbone/backbone.js"></script>
+   
+    
+    <!-- <script src="sample.js"></script> -->
+    <script src="app.js"></script>
+    <script>
+        (function($){
+    $(document).ready(function () {
+        
+            var additionView = new AdditionView({
+              model: additionModel,
+               el: 'body'
+            });
+        
+            
+            additionView.render();
+        
+          });
+        })(jQuery);
+    </script>
+
+    
+  </body>
+</html>

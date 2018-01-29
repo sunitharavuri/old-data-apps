@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>addition of two numbers </title>
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet"><html>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
+    <script src="lib/backbone/backbone.js"></script>
+              
+               
+  </head>
+     <body>
+          <form action="/add" id="add-form">
+            First Number: <input type="number" id="num1"><br>
+            Second Number: <input type="number" id="num2"><br>
+            <button id="add">ADD</button>
+          </form>
+          <script language="javascript">
+              $(function(){
+    
+//    var Credentials = Backbone.Model.extend({
+//     default:{
+//      number1:0,
+//      number2:0
+
+//       },
+//   });
+//   var AddView = Backbone.View.extend({
+//     el: $("#add-form"),
+//     events: {
+//       "click #add": "add"
+//     },
+//     initialize: function(){
+//       var self = this;
+//       this.number1 = $("#num1");
+//       this.number2= $("#num2");
+//       this.number1.change(function(e){
+//         self.model.set({number1: $(e.currentTarget).val()});
+        
+//       });
+//       this.number2.change(function(e){
+//         self.model.set({number2: $(e.currentTarget).val()});
+//       });
+//     },
+//     add: function(){
+//         var sum=0;
+//       var num_1= this.model.get('number1');
+//       var num_2 = this.model.get('number2');
+//          sum = parseInt(num_1)+parseInt(num_2);
+//       alert("adddition of  two numbers is"+sum);
+//     //   return false;
+//     }
+//   });
+  var addView = new AddView({
+      model: new Credentials(),
+      
+    });
+    addView.render();
+});
+          </script>
+    </body>
+ </html>
