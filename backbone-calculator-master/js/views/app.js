@@ -1,0 +1,104 @@
+var app = app || {};
+
+// App view responsible for rendering app
+app.AppView = Backbone.View.extend({
+
+    el: $('#calculator'),
+
+    template: _.template($('#app-template').html()),
+
+    initialize: function () {
+        this.render();
+    },
+
+    render: function () {
+        this.$el.html(this.template());
+        this.bindEvents();
+        this.renderDisplay();
+        this.renderButtons();
+        return this;
+    },
+
+    bindEvents: function () {
+        this.listenTo(this.model, 'change', this.onCalculatorChange, this);
+    },
+
+    onCalculatorChange: function () {
+        this.displayView.setValue(this.model.get('result'));
+    },
+
+    renderDisplay: function () {
+        this.displayView = new app.DisplayView({
+            model: this.model
+        });
+        this.$('.display').append(this.displayView.el);
+    },
+
+    renderButtons: function () {
+        var i = 10;
+        this.buttons = {};
+        while (i--) {
+            this.renderButton({
+                value: i,
+                viewClass: 'btn-' + i,
+                buttonClass: ''
+            });
+        }
+        this.renderButton({
+            value: '/',
+            viewClass: 'btn-divide',
+            buttonClass: 'btn-info'
+        });
+        this.renderButton({
+            value: '+',
+            viewClass: 'btn-plus',
+            buttonClass: 'btn-info'
+        });
+        this.renderButton({
+            value: '-',
+            viewClass: 'btn-minus',
+            buttonClass: 'btn-info'
+        });
+        this.renderButton({
+            value: '.',
+            viewClass: 'btn-dot',
+            buttonClass: ''
+        });
+        this.renderButton({
+            value: '*',
+            viewClass: 'btn-multiply',
+            buttonClass: 'btn-info'
+        });
+        this.renderButton({
+            value: '=',
+            viewClass: 'btn-return',
+            buttonClass: 'btn-info'
+        });
+        this.renderButton({
+            value: 'C',
+            viewClass: 'btn-clear',
+            buttonClass: 'btn-danger'
+        });
+    },
+
+    renderButton: function (options) {
+        options.viewClass = options.viewClass || options.value;
+        this.buttons[options.value] = new app.ButtonView({
+            model: new app.Button({
+                value: options.value,
+                className: options.buttonClass
+            })
+        });
+        this.$('.' + options.viewClass).append(this.buttons[options.value].el);
+    },
+
+    events: {
+        'click .btn': 'onButtonClick'
+    },
+
+    onButtonClick: function (e) {
+        var value = $(e.currentTarget).data('value');
+        this.model.command(value);
+    }
+
+});
